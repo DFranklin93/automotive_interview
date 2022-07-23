@@ -12,3 +12,7 @@ afterEach(cleanup);
 it("Renders without crashing", () => {
   expect(screen.getByTestId("Scheduler")).toBeInTheDocument();
 });
+
+it("Contains timeslot", () => {
+  expect(screen.getAllByTestId("Timeslot")).toHaveLength(9);
+});
